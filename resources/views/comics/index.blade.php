@@ -38,9 +38,13 @@
                       </a>
                     </td>
                     <td>
-                      <a href="">
-                        <button type="button" class="btn btn-danger">Cancella</button>
-                      </a>
+                      <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                         <button type="submit" class="btn btn-danger">Cancella</button>
+                        
+                      </form>
                     </td>
                 </tr>
               @endforeach
