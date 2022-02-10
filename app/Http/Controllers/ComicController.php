@@ -87,7 +87,6 @@ class ComicController extends Controller
     {
         $input = $request->all();
 
-        $comic = new Comic();
         $comic->title = $input['title'];
         $comic->description = $input['description'];
         $comic->thumb = $input['thumb'];

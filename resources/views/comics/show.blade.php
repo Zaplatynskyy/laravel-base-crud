@@ -19,7 +19,7 @@
                         <span>{{$comic->sale_date}}</span>
                         <div class="font-weight-bold">{{$comic->price}} $</div>
                         <a href="{{route('comics.index')}}">
-                            <button type="button" class="btn btn-primary">Indietro</button>
+                            <button type="button" class="btn btn-primary">Home</button>
                         </a>
                     </div>
                 </div>
