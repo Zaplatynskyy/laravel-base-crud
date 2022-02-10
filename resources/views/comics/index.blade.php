@@ -6,7 +6,12 @@
 
 @section('PageContent')
     <div class="container">
-        <h1 class="title my-4 text-uppercase">Comics List</h1>
+        <header class="d-flex justify-content-between align-items-center px-3">
+          <h1 class="title my-4 text-uppercase">Comics List</h1>
+          <a href="{{route('comics.create')}}"">
+            <button type="button" class="btn btn-info">Inserisci</button>
+          </a>
+        </header>
         <table class="table">
             <thead>
               <tr>
