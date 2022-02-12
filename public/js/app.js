@@ -37268,7 +37268,27 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // oggetto elementi button 'Cancella'
+
+
+var deleteBtn = document.getElementsByClassName('delete_btn'); // oggetto elementi button 'Annulla'
+
+var cancelBtn = document.getElementsByClassName('cancel_btn'); // ciclo n volte quanti sono i bottoni 'Cancella' e 'Annulla' (nel nostro caso stessa quantità)
+
+var _loop = function _loop(i) {
+  // per ogni elemento button 'Cancella', mi salvo il suo id che corrisponde al valore della colonna ID dell'elemento
+  var elementId = deleteBtn[i].getAttribute("id");
+  deleteBtn[i].addEventListener('click', function () {
+    document.querySelector(".alert_delete_".concat(elementId)).classList.remove('display_none');
+  });
+  cancelBtn[i].addEventListener('click', function () {
+    document.querySelector(".alert_delete_".concat(elementId)).classList.add('display_none');
+  });
+};
+
+for (var i = 0; i < deleteBtn.length; i++) {
+  _loop(i);
+}
 
 /***/ }),
 
